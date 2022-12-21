@@ -118,6 +118,11 @@ import { RouterModule } from '@angular/router';
 import { UploadFilesDialogComponent } from './components/upload-files-dialog/upload-files-dialog.component';
 import { SidenavWrapperComponent } from './components/sidenav/sidenav-wrapper/sidenav-wrapper.component';
 import { AppLayoutComponent } from './components/layout/app-layout/app-layout.component';
+import { AppTrashcanModule } from './components/trashcan/trashcan.module';
+import { AppSharedLinkViewModule } from './components/shared-link-view/shared-link-view.module';
+import { AppViewerModule } from './components/viewer/viewer.module';
+import { PreviewModule } from './components/preview/preview.module';
+import { AcaFolderRulesModule } from '@alfresco/aca-folder-rules';
 
 registerLocaleData(localeFr);
 registerLocaleData(localeDe);
@@ -164,7 +169,12 @@ registerLocaleData(localeSv);
     AppHeaderModule,
     AppNodeVersionModule,
     HammerModule,
-    ViewProfileModule
+    ViewProfileModule,
+    AppTrashcanModule,
+    AppSharedLinkViewModule,
+    AppViewerModule,
+    PreviewModule,
+    AcaFolderRulesModule
   ],
   declarations: [
     FilesComponent,
