@@ -34,21 +34,10 @@ import { AppToolbarModule } from '../toolbar/toolbar.module';
 import { AppInfoDrawerModule } from '../info-drawer/info.drawer.module';
 import { CoreExtensionsModule } from '../../extensions/core.extensions.module';
 
-// const routes: Routes = [
-//   {
-//     path: '',
-//     component: SharedLinkViewComponent,
-//     data: {
-//       title: 'APP.PREVIEW.TITLE'
-//     }
-//   }
-// ];
-
 @NgModule({
   imports: [
     CommonModule,
     CoreModule.forChild(),
-    // RouterModule.forChild(routes),
     DirectivesModule,
     AppCommonModule,
     AppToolbarModule,
