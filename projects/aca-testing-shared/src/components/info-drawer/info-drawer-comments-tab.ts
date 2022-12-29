@@ -23,22 +23,23 @@
  * along with Alfresco. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { by, browser, until } from 'protractor';
+import { by, browser, until, ElementFinder } from 'protractor';
 import { Component } from '../component';
 import { BROWSER_WAIT_TIMEOUT } from '../../configs';
 import { typeText } from '../../utilities/utils';
 import { BrowserActions, BrowserVisibility } from '@alfresco/adf-testing';
+import { By } from '@angular/platform-browser';
 
 export class CommentsTab extends Component {
-  commentsContainer = this.byCss('.adf-comments-container');
-  commentsHeader = this.byCss('.adf-comments-header');
-  commentTextarea = this.byCss('.adf-comments-input-container textarea');
-  addCommentButton = this.byCss('button.adf-comments-input-add');
-  commentListItem = by.css('.adf-comment-list-item');
-  commentUserAvatar = by.css('.adf-comment-img-container');
-  commentUser = by.css('.adf-comment-user-name');
-  commentText = by.css('.adf-comment-message');
-  commentTime = by.css('.adf-comment-message-time');
+  commentsContainer: ElementFinder = this.byCss('.adf-comments-container');
+  commentsHeader: ElementFinder = this.byCss('.adf-comments-header');
+  commentTextarea: ElementFinder = this.byCss('.adf-comments-input-container textarea');
+  addCommentButton: ElementFinder = this.byCss('button.adf-comments-input-add');
+  commentListItem: By = by.css('.adf-comment-list-item');
+  commentUserAvatar: By = by.css('.adf-comment-img-container');
+  commentUser: By = by.css('.adf-comment-user-name');
+  commentText: By = by.css('.adf-comment-message');
+  commentTime: By = by.css('.adf-comment-message-time');
 
   constructor(ancestor?: string) {
     super('adf-comments', ancestor);

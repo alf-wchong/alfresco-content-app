@@ -28,13 +28,14 @@ import { Component } from '../component';
 import { isPresentAndDisplayed, waitForStaleness } from '../../utilities/utils';
 const moment = require('moment');
 import { BrowserActions } from '@alfresco/adf-testing';
+import { By } from '@angular/platform-browser';
 
 export class DateTimePicker extends Component {
   calendar = this.byCss('.mat-datetimepicker-popup', browser);
   headerDate = this.byCss('.mat-datetimepicker-calendar-header-date');
   headerYear = this.byCss('.mat-datetimepicker-calendar-header-year');
   dayPicker = this.byCss('mat-datetimepicker-month-view');
-  rootElemLocator = by.css('.mat-datetimepicker-popup');
+  rootElemLocator: By = by.css('.mat-datetimepicker-popup');
 
   constructor(ancestor?: string) {
     super('.mat-datetimepicker-popup', ancestor);

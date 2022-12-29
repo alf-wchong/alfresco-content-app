@@ -463,7 +463,16 @@
       "root": "projects/aca-testing-shared",
       "sourceRoot": "projects/aca-testing-shared/src",
       "projectType": "library",
-      "prefix": "lib"
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/aca-testing-shared/tsconfig.lib.json",
+            "project": "projects/aca-testing-shared/ng-package.json"
+          }
+        }
+      }
     },
     "aca-about": {
       "projectType": "library",

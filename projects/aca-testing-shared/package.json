@@ -2,6 +2,12 @@
   "name": "aca-testing-shared",
   "version": "3.0.0",
   "main": "src/index.ts",
+  "peerDependencies": {
+    "protractor": "~7.0.0",
+    "protractor-retry-angular-cli": "^2.0.3",
+    "protractor-screenshoter-plugin": "0.10.3",
+    "protractor-smartrunner": "^2.0.0-beta6"
+  },
   "dependencies": {
     "tslib": "^2.0.0"
   }
