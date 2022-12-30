@@ -6,5 +6,10 @@
       "projects/aca-content/src/lib/ui"
     ],
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [{
+    "glob": "**/*",
+    "input": "./src/lib/ui/",
+    "output": "ui"
+  }]
 }

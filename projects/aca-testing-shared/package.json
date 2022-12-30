@@ -1,5 +1,5 @@
 {
-  "name": "aca-testing-shared",
+  "name": "@alfresco/aca-testing-shared",
   "version": "3.0.0",
   "main": "src/index.ts",
   "peerDependencies": {

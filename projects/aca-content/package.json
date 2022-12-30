@@ -1,5 +1,5 @@
 {
-  "name": "aca-content",
+  "name": "@alfresco/aca-content",
   "version": "0.0.1",
   "peerDependencies": {
     "@alfresco/adf-content-services": "6.0.0-A.1-37503",

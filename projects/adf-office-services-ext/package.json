@@ -1,0 +1,8 @@
+{
+  "name": "@alfresco/aca-adf-office-service-ext",
+  "version": "3.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
