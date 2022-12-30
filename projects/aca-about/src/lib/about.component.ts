@@ -28,7 +28,7 @@ import { DEV_MODE_TOKEN } from './dev-mode.tokens';
 import { Observable } from 'rxjs';
 import { AppExtensionService, ExtensionRef } from '@alfresco/adf-extensions';
 import { AuthenticationService, DiscoveryApiService, RepositoryInfo } from '@alfresco/adf-core';
-import { PACKAGE_JSON } from './aca-about.module';
+import { PACKAGE_JSON } from './package-json.token';
 
 @Component({
   selector: 'app-about-page',

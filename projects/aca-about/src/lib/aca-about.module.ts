@@ -23,7 +23,7 @@
  * along with Alfresco. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { InjectionToken, ModuleWithProviders, NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { AboutComponent } from './about.component';
 import { CommonModule } from '@angular/common';
 import { CoreModule } from '@alfresco/adf-core';
@@ -31,8 +31,7 @@ import { SharedModule, PageLayoutModule } from '@alfresco/aca-shared';
 
 import { ExtensionService, provideExtensionConfig } from '@alfresco/adf-extensions';
 import { DEV_MODE_TOKEN } from './dev-mode.tokens';
-
-export const PACKAGE_JSON = new InjectionToken<any>('PACKAGE_JSON');
+import { PACKAGE_JSON } from './package-json.token';
 
 @NgModule({
   imports: [CommonModule, CoreModule.forChild(), SharedModule, PageLayoutModule],
