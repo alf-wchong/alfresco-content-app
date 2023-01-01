@@ -3,5 +3,6 @@
   "dest": "../../dist/aca-settings",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": ["assets"]
 }
