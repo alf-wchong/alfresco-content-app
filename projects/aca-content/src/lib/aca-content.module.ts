@@ -118,6 +118,7 @@ import { RouterModule } from '@angular/router';
 import { UploadFilesDialogComponent } from './components/upload-files-dialog/upload-files-dialog.component';
 import { SidenavWrapperComponent } from './components/sidenav/sidenav-wrapper/sidenav-wrapper.component';
 import { AppLayoutComponent } from './components/layout/app-layout/app-layout.component';
+import { CustomIconsModule } from './extensions/custom-icons.module';
 
 registerLocaleData(localeFr);
 registerLocaleData(localeDe);
@@ -164,7 +165,8 @@ registerLocaleData(localeSv);
     AppHeaderModule,
     AppNodeVersionModule,
     HammerModule,
-    ViewProfileModule
+    ViewProfileModule,
+    CustomIconsModule
   ],
   declarations: [
     FilesComponent,
