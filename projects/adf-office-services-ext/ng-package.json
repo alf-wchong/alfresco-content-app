@@ -1,5 +1,5 @@
 {
-  "dest": "../../dist/aca-adf-office-service-ext",
+  "dest": "../../dist/adf-office-services-ext",
   "lib": {
     "entryFile": "src/public-api.ts"
   },
