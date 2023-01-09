@@ -67,7 +67,6 @@ import { AppLayoutModule } from './components/layout/layout.module';
 import { AppSearchInputModule } from './components/search/search-input.module';
 import { DocumentListCustomComponentsModule } from './components/dl-custom-components/document-list-custom-components.module';
 import { AppSearchResultsModule } from './components/search/search-results.module';
-import { AppLoginModule } from './components/login/login.module';
 import { AppHeaderModule } from './components/header/header.module';
 import { AppNodeVersionModule } from './components/node-version/node-version.module';
 import { FavoritesComponent } from './components/favorites/favorites.component';
@@ -154,7 +153,6 @@ registerLocaleData(localeSv);
     SharedModule,
     MaterialModule,
     AppStoreModule,
-    AppLoginModule,
     AppCommonModule,
     AppLayoutModule,
     DirectivesModule,
