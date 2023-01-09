@@ -44,7 +44,6 @@ import { AppViewerComponent } from './components/viewer/viewer.component';
 import { SharedLinkViewComponent } from './components/shared-link-view/shared-link-view.component';
 import { PreviewComponent } from './components/preview/preview.component';
 import { TrashcanComponent } from './components/trashcan/trashcan.component';
-import { ManageRulesSmartComponent } from '@alfresco/aca-folder-rules';
 
 export const CONTENT_ROUTES: ExtensionRoute[] = [
   {
@@ -821,7 +820,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
           children: [
             {
               path: 'rules',
-              component: ManageRulesSmartComponent
+              loadChildren: () => import('@alfresco/aca-folder-rules').then((m) => m.AcaFolderRulesModule)
             }
           ]
         }
