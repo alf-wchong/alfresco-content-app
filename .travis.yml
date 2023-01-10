@@ -89,7 +89,7 @@ jobs:
       script: npm ci && ng test aca-folder-rules $TEST_OPTS
       cache: false
 
-     - stage: Quality and Unit tests
+    - stage: Quality and Unit tests
       name: 'Unit tests: aca-preview'
       script: npm ci && ng test aca-preview $TEST_OPTS
       cache: false

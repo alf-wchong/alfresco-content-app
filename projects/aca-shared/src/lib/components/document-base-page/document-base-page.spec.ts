@@ -231,7 +231,7 @@ describe('Info Drawer state', () => {
     };
 
     TestBed.configureTestingModule({
-      // imports: [AppTestingModule, EffectsModule.forRoot([ViewerEffects])],
+      imports: [NoopAnimationsModule, HttpClientModule, RouterTestingModule],
       declarations: [TestComponent],
       providers: [
         { provide: DocumentBasePageService, useClass: DocumentBasePageServiceMock },
