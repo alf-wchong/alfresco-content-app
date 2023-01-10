@@ -28,11 +28,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { CoreModule } from '@alfresco/adf-core';
 import { ContentDirectiveModule } from '@alfresco/adf-content-services';
-import { DirectivesModule } from '../../directives/directives.module';
-import { AppInfoDrawerModule } from '../info-drawer/info.drawer.module';
-import { CoreExtensionsModule } from '../../extensions/core.extensions.module';
-import { AppToolbarModule } from '../toolbar/toolbar.module';
-import { AppViewerComponent } from './viewer.component';
+import { SharedInfoDrawerModule, SharedToolbarModule } from '@alfresco/aca-shared';
+import { SharedDirectivesModule } from '@alfresco/aca-shared';
+import { ExtensionsModule } from '@alfresco/adf-extensions';
+import { AcaViewerComponent } from './components/viewer/viewer.component';
 
 const routes: Routes = [
   {
@@ -41,7 +40,7 @@ const routes: Routes = [
       title: 'APP.PREVIEW.TITLE',
       navigateMultiple: true
     },
-    component: AppViewerComponent
+    component: AcaViewerComponent
   }
 ];
 
@@ -50,13 +49,13 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     CoreModule.forChild(),
+    ExtensionsModule.forChild(),
     ContentDirectiveModule,
-    DirectivesModule,
-    AppInfoDrawerModule,
-    CoreExtensionsModule.forChild(),
-    AppToolbarModule
+    SharedDirectivesModule,
+    SharedInfoDrawerModule,
+    SharedToolbarModule
   ],
-  declarations: [AppViewerComponent],
-  exports: [AppViewerComponent]
+  declarations: [AcaViewerComponent],
+  exports: [AcaViewerComponent]
 })
-export class AppViewerModule {}
+export class AcaViewerModule {}

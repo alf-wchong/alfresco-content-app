@@ -62,7 +62,7 @@ export const CONTENT_ROUTES: ExtensionRoute[] = [
                   title: 'APP.PREVIEW.TITLE',
                   navigateMultiple: true
                 },
-                loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+                loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
               }
             ]
           }
@@ -134,7 +134,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'personal-files'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         },
@@ -147,7 +147,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'personal-files'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         }
@@ -173,7 +173,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'personal-files'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         },
@@ -202,7 +202,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'personal-files'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         }
@@ -249,7 +249,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'libraries'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         },
@@ -262,7 +262,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'libraries'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         }
@@ -306,7 +306,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'libraries'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         },
@@ -319,7 +319,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'libraries'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         }
@@ -358,7 +358,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'favorites'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         },
@@ -371,7 +371,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'favorites'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         }
@@ -409,7 +409,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'recent-files'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         },
@@ -422,7 +422,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'recent-files'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         }
@@ -458,7 +458,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'shared'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         },
@@ -471,7 +471,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'shared'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         }
@@ -510,7 +510,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'search'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         },
@@ -523,7 +523,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'search'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         }
@@ -548,7 +548,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
               data: {
                 navigateSource: 'search'
               },
-              loadChildren: () => import('./components/viewer/viewer.module').then((m) => m.AppViewerModule)
+              loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
             }
           ]
         }

@@ -11,9 +11,6 @@ export * from './lib/services/content-url.service';
 export * from './lib/components/preview/preview.module';
 export * from './lib/components/preview/preview.component';
 
-export * from './lib/components/viewer/viewer.module';
-export * from './lib/components/viewer/viewer.component';
-
 export * from './lib/components/shared-link-view/shared-link-view.module';
 export * from './lib/components/shared-link-view/shared-link-view.component';
 
