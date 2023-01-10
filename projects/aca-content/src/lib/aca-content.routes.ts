@@ -40,7 +40,6 @@ import { ViewProfileComponent } from './components/view-profile/view-profile.com
 import { ViewProfileRuleGuard } from './components/view-profile/view-profile.guard';
 import { Route } from '@angular/router';
 import { SharedLinkViewComponent } from './components/shared-link-view/shared-link-view.component';
-import { PreviewComponent } from './components/preview/preview.component';
 import { TrashcanComponent } from './components/trashcan/trashcan.component';
 
 export const CONTENT_ROUTES: ExtensionRoute[] = [
@@ -66,16 +65,7 @@ export const CONTENT_ROUTES: ExtensionRoute[] = [
         children: [
           {
             path: '',
-            children: [
-              {
-                path: '',
-                data: {
-                  title: 'APP.PREVIEW.TITLE',
-                  navigateMultiple: true
-                },
-                loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
-              }
-            ]
+            loadChildren: () => import('@alfresco/aca-viewer').then((m) => m.AcaViewerModule)
           }
         ]
       }
@@ -134,11 +124,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
           children: [
             {
               path: '',
-              component: PreviewComponent,
-              data: {
-                title: 'APP.PREVIEW.TITLE',
-                navigateMultiple: true
-              }
+              loadChildren: () => import('@alfresco/aca-preview').then((m) => m.PreviewModule)
             }
           ],
           data: {
@@ -203,11 +189,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
           children: [
             {
               path: '',
-              component: PreviewComponent,
-              data: {
-                title: 'APP.PREVIEW.TITLE',
-                navigateMultiple: true
-              }
+              loadChildren: () => import('@alfresco/aca-preview').then((m) => m.PreviewModule)
             }
           ],
           data: {
@@ -220,11 +202,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
           children: [
             {
               path: '',
-              component: PreviewComponent,
-              data: {
-                title: 'APP.PREVIEW.TITLE',
-                navigateMultiple: true
-              }
+              loadChildren: () => import('@alfresco/aca-preview').then((m) => m.PreviewModule)
             }
           ],
           data: {
@@ -276,11 +254,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
           children: [
             {
               path: '',
-              component: PreviewComponent,
-              data: {
-                title: 'APP.PREVIEW.TITLE',
-                navigateMultiple: true
-              }
+              loadChildren: () => import('@alfresco/aca-preview').then((m) => m.PreviewModule)
             }
           ],
           data: {
@@ -394,11 +368,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
           children: [
             {
               path: '',
-              component: PreviewComponent,
-              data: {
-                title: 'APP.PREVIEW.TITLE',
-                navigateMultiple: true
-              }
+              loadChildren: () => import('@alfresco/aca-preview').then((m) => m.PreviewModule)
             }
           ],
           data: {
@@ -454,11 +424,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
           children: [
             {
               path: '',
-              component: PreviewComponent,
-              data: {
-                title: 'APP.PREVIEW.TITLE',
-                navigateMultiple: true
-              }
+              loadChildren: () => import('@alfresco/aca-preview').then((m) => m.PreviewModule)
             }
           ],
           data: {
@@ -512,11 +478,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
           children: [
             {
               path: '',
-              component: PreviewComponent,
-              data: {
-                title: 'APP.PREVIEW.TITLE',
-                navigateMultiple: true
-              }
+              loadChildren: () => import('@alfresco/aca-preview').then((m) => m.PreviewModule)
             }
           ],
           data: {
@@ -582,11 +544,7 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
           children: [
             {
               path: '',
-              component: PreviewComponent,
-              data: {
-                title: 'APP.PREVIEW.TITLE',
-                navigateMultiple: true
-              }
+              loadChildren: () => import('@alfresco/aca-preview').then((m) => m.PreviewModule)
             }
           ],
           data: {

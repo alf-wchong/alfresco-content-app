@@ -26,22 +26,34 @@
 import { CoreModule } from '@alfresco/adf-core';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { ContentDirectiveModule } from '@alfresco/adf-content-services';
-import { CoreExtensionsModule } from '../../extensions/core.extensions.module';
-import { DirectivesModule } from '../../directives/directives.module';
-import { AppInfoDrawerModule } from '../info-drawer/info.drawer.module';
-import { PreviewComponent } from './preview.component';
-import { AppToolbarModule } from '../toolbar/toolbar.module';
+import { SharedDirectivesModule, SharedToolbarModule, SharedInfoDrawerModule } from '@alfresco/aca-shared';
+import { ExtensionsModule } from '@alfresco/adf-extensions';
+import { PreviewComponent } from './components/preview.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: PreviewComponent,
+    data: {
+      title: 'APP.PREVIEW.TITLE',
+      navigateMultiple: true
+    }
+  }
+];
 
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule.forChild(routes),
     CoreModule.forChild(),
+    ExtensionsModule,
     ContentDirectiveModule,
-    DirectivesModule,
-    AppInfoDrawerModule,
-    CoreExtensionsModule.forChild(),
-    AppToolbarModule
+    SharedDirectivesModule,
+    ContentDirectiveModule,
+    SharedInfoDrawerModule,
+    SharedToolbarModule
   ],
   declarations: [PreviewComponent],
   exports: [PreviewComponent]

@@ -44,7 +44,7 @@ import {
   LibraryStatusColumnComponent,
   TrashcanNameColumnComponent
 } from '@alfresco/adf-content-services';
-import { ExtensionsDataLoaderGuard, RouterExtensionService, SharedModule } from '@alfresco/aca-shared';
+import { DocumentBasePageService, ExtensionsDataLoaderGuard, RouterExtensionService, SharedModule } from '@alfresco/aca-shared';
 import * as rules from '@alfresco/aca-shared/rules';
 
 import { FilesComponent } from './components/files/files.component';
@@ -103,7 +103,7 @@ import { CommentsTabComponent } from './components/info-drawer/comments-tab/comm
 import { LibraryMetadataTabComponent } from './components/info-drawer/library-metadata-tab/library-metadata-tab.component';
 import { MetadataTabComponent } from './components/info-drawer/metadata-tab/metadata-tab.component';
 import { VersionsTabComponent } from './components/info-drawer/versions-tab/versions-tab.component';
-import { PreviewComponent } from './components/preview/preview.component';
+import { PreviewComponent } from '@alfresco/aca-preview';
 import { DocumentDisplayModeComponent } from './components/toolbar/document-display-mode/document-display-mode.component';
 import { ToggleEditOfflineComponent } from './components/toolbar/toggle-edit-offline/toggle-edit-offline.component';
 import { ToggleFavoriteLibraryComponent } from './components/toolbar/toggle-favorite-library/toggle-favorite-library.component';
@@ -119,7 +119,6 @@ import { SidenavWrapperComponent } from './components/sidenav/sidenav-wrapper/si
 import { AppLayoutComponent } from './components/layout/app-layout/app-layout.component';
 import { AppTrashcanModule } from './components/trashcan/trashcan.module';
 import { AppSharedLinkViewModule } from './components/shared-link-view/shared-link-view.module';
-import { PreviewModule } from './components/preview/preview.module';
 import { AcaFolderRulesModule } from '@alfresco/aca-folder-rules';
 
 registerLocaleData(localeFr);
@@ -169,7 +168,6 @@ registerLocaleData(localeSv);
     ViewProfileModule,
     AppTrashcanModule,
     AppSharedLinkViewModule,
-    PreviewModule,
     AcaFolderRulesModule
   ],
   declarations: [
@@ -187,6 +185,7 @@ registerLocaleData(localeSv);
   providers: [
     { provide: AppConfigService, useClass: DebugAppConfigService },
     { provide: ContentVersionService, useClass: ContentUrlService },
+    { provide: DocumentBasePageService, useExisting: ContentVersionService },
     {
       provide: TRANSLATION_PROVIDER,
       multi: true,
