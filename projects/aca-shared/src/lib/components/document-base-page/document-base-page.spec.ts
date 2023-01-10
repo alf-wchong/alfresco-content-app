@@ -86,7 +86,6 @@ describe('PageComponent', () => {
         EffectsModule.forRoot([]),
         PipeModule
       ],
-      // imports: [AppTestingModule, EffectsModule.forRoot([ViewerEffects])],
       declarations: [TestComponent],
       providers: [{ provide: DocumentBasePageService, useClass: DocumentBasePageServiceMock }, AppExtensionService]
     });
