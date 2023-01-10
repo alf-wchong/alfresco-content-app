@@ -39,11 +39,22 @@ import { HomeComponent } from './components/home/home.component';
 import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 import { ViewProfileRuleGuard } from './components/view-profile/view-profile.guard';
 import { Route } from '@angular/router';
+import { SharedLinkViewComponent } from './components/shared-link-view/shared-link-view.component';
+import { PreviewComponent } from './components/preview/preview.component';
+import { TrashcanComponent } from './components/trashcan/trashcan.component';
 
 export const CONTENT_ROUTES: ExtensionRoute[] = [
   {
     path: 'preview/s/:id',
-    loadChildren: () => import('./components/shared-link-view/shared-link-view.module').then((m) => m.AppSharedLinkViewModule)
+    children: [
+      {
+        path: '',
+        component: SharedLinkViewComponent,
+        data: {
+          title: 'APP.PREVIEW.TITLE'
+        }
+      }
+    ]
   },
   {
     path: 'view',
@@ -120,7 +131,16 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
         // deprecated, backwards compatibility with ACA 1.8
         {
           path: 'preview/:nodeId',
-          loadChildren: () => import('./components/preview/preview.module').then((m) => m.PreviewModule),
+          children: [
+            {
+              path: '',
+              component: PreviewComponent,
+              data: {
+                title: 'APP.PREVIEW.TITLE',
+                navigateMultiple: true
+              }
+            }
+          ],
           data: {
             navigateSource: 'personal-files'
           }
@@ -180,7 +200,16 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
         // deprecated, backwards compatibility with ACA 1.8
         {
           path: 'preview/:nodeId',
-          loadChildren: () => import('./components/preview/preview.module').then((m) => m.PreviewModule),
+          children: [
+            {
+              path: '',
+              component: PreviewComponent,
+              data: {
+                title: 'APP.PREVIEW.TITLE',
+                navigateMultiple: true
+              }
+            }
+          ],
           data: {
             navigateSource: 'personal-files'
           }
@@ -188,7 +217,16 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
         // deprecated, backwards compatibility with ACA 1.8
         {
           path: ':folderId/preview/:nodeId',
-          loadChildren: () => import('./components/preview/preview.module').then((m) => m.PreviewModule),
+          children: [
+            {
+              path: '',
+              component: PreviewComponent,
+              data: {
+                title: 'APP.PREVIEW.TITLE',
+                navigateMultiple: true
+              }
+            }
+          ],
           data: {
             navigateSource: 'personal-files'
           }
@@ -235,7 +273,16 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
         // deprecated, backwards compatibility with ACA 1.8
         {
           path: 'preview/:nodeId',
-          loadChildren: () => import('./components/preview/preview.module').then((m) => m.PreviewModule),
+          children: [
+            {
+              path: '',
+              component: PreviewComponent,
+              data: {
+                title: 'APP.PREVIEW.TITLE',
+                navigateMultiple: true
+              }
+            }
+          ],
           data: {
             navigateSource: 'libraries'
           }
@@ -344,7 +391,16 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
         // deprecated, backwards compatibility with ACA 1.8
         {
           path: 'preview/:nodeId',
-          loadChildren: () => import('./components/preview/preview.module').then((m) => m.PreviewModule),
+          children: [
+            {
+              path: '',
+              component: PreviewComponent,
+              data: {
+                title: 'APP.PREVIEW.TITLE',
+                navigateMultiple: true
+              }
+            }
+          ],
           data: {
             navigateSource: 'favorites'
           }
@@ -395,7 +451,16 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
         // deprecated, backwards compatibility with ACA 1.8
         {
           path: 'preview/:nodeId',
-          loadChildren: () => import('./components/preview/preview.module').then((m) => m.PreviewModule),
+          children: [
+            {
+              path: '',
+              component: PreviewComponent,
+              data: {
+                title: 'APP.PREVIEW.TITLE',
+                navigateMultiple: true
+              }
+            }
+          ],
           data: {
             navigateSource: 'recent-files'
           }
@@ -444,7 +509,16 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
         // deprecated, backwards compatibility with ACA 1.8
         {
           path: 'preview/:nodeId',
-          loadChildren: () => import('./components/preview/preview.module').then((m) => m.PreviewModule),
+          children: [
+            {
+              path: '',
+              component: PreviewComponent,
+              data: {
+                title: 'APP.PREVIEW.TITLE',
+                navigateMultiple: true
+              }
+            }
+          ],
           data: {
             navigateSource: 'shared'
           }
@@ -481,7 +555,16 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
     },
     {
       path: 'trashcan',
-      loadChildren: () => import('./components/trashcan/trashcan.module').then((m) => m.AppTrashcanModule)
+      children: [
+        {
+          path: '',
+          component: TrashcanComponent,
+          data: {
+            title: 'APP.BROWSE.TRASHCAN.TITLE',
+            sortingPreferenceKey: 'trashcan'
+          }
+        }
+      ]
     },
     {
       path: 'search',
@@ -496,7 +579,16 @@ export const CONTENT_LAYOUT_ROUTES: Route = {
         // deprecated, backwards compatibility with ACA 1.8
         {
           path: 'preview/:nodeId',
-          loadChildren: () => import('./components/preview/preview.module').then((m) => m.PreviewModule),
+          children: [
+            {
+              path: '',
+              component: PreviewComponent,
+              data: {
+                title: 'APP.PREVIEW.TITLE',
+                navigateMultiple: true
+              }
+            }
+          ],
           data: {
             navigateSource: 'search'
           }

@@ -25,13 +25,13 @@
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { CoreModule } from '@alfresco/adf-core';
 import { ContentDirectiveModule } from '@alfresco/adf-content-services';
 import { SharedInfoDrawerModule, SharedToolbarModule } from '@alfresco/aca-shared';
 import { SharedDirectivesModule } from '@alfresco/aca-shared';
 import { ExtensionsModule } from '@alfresco/adf-extensions';
 import { AcaViewerComponent } from './components/viewer/viewer.component';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -47,8 +47,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
     CoreModule.forChild(),
+    RouterModule.forChild(routes),
     ExtensionsModule.forChild(),
     ContentDirectiveModule,
     SharedDirectivesModule,

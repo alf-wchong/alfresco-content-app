@@ -10,8 +10,5 @@
       "@alfresco/aca-folder-rules": ["dist/@alfresco/aca-folder-rules"],
       "@alfresco/aca-viewer": ["dist/@alfresco/aca-viewer"]
     }
-  },
-  "angularCompilerOptions": {
-    "compilerOptions": "partial"
   }
 }
